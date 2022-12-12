@@ -1,20 +1,21 @@
-let min = 1
-let max = 5
-let random = Math.random() * (max - min) + min;
+let min = 1;
+let max = 5;
+let random = Math.round(Math.random() * (max - min) + min);
 let i=0;
-let nombre = prompt("choisissez un nombre entre 1 et 5"
-
-do {
-if (nombre<random) {
-    print("le nombre est plus grand")
-    nombre = print("réessayer");
-} 
-
+let nombre = 0
+ do {nombre = prompt("choisissez un nombre entre 1 et 5")
+ if (nombre<random) {
+    prompt("le nombre est plus grand")
+    i++
     
-} while (nombre != random);
+ } else if (nombre>random) {
+    prompt("le nombre est plus petit")
+    i++
+} else {
+    prompt("bien joué")
+    i++
 
-
-
-
-
-
+} 
+    
+ } while (nombre != random);
+console.log(i);
